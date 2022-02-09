@@ -40,3 +40,54 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+const navBar = document.querySelectorAll('a');
+navBar.forEach(item => item.classList.add("italic"));
+const links = Object.values(siteContent.nav);
+navBar.forEach((text, index) => {
+  text.textContent = links[index]
+})
+
+const logoImg = document.querySelector('#logo-img')
+logoImg.src = '../mocks/img/logo.png'
+
+const ctaImg = document.querySelector("#cta-img");
+ctaImg.src = '../mocks/img/cta.png'
+
+const middleImg = document.querySelector("#middle-img");
+middleImg.src = '../mocks/img/accent.png'
+
+const hOneTextNode = document.querySelector("h1");
+hOneTextNode.textContent = siteContent["cta"]["h1"];
+
+const buttonElement = document.querySelector("button");
+buttonElement.textContent = siteContent["cta"]["button"];
+
+const topContent = document.querySelector(".top-content");
+
+topContent.children[0].children[0].textContent = siteContent["main-content"]["features-h4"];
+topContent.children[0].children[1].textContent = siteContent["main-content"]["features-content"];
+topContent.children[1].children[0].textContent = siteContent["main-content"]["about-h4"];
+topContent.children[1].children[1].textContent = siteContent["main-content"]["about-content"];
+
+const bottomContent = document.querySelector(".bottom-content");
+
+bottomContent.children[0].children[0].textContent = siteContent["main-content"]["services-h4"];
+bottomContent.children[0].children[1].textContent = siteContent["main-content"]["services-content"];
+bottomContent.children[1].children[0].textContent = siteContent["main-content"]["product-h4"];
+bottomContent.children[1].children[1].textContent = siteContent["main-content"]["product-content"];
+bottomContent.children[2].children[0].textContent = siteContent["main-content"]["vision-h4"];
+bottomContent.children[2].children[1].textContent = siteContent["main-content"]["vision-content"];
+
+const contact = document.querySelector(".contact")
+
+contact.children[0].textContent = siteContent["contact"]["contact-h4"];
+contact.children[1].textContent = siteContent["contact"]["address"];
+contact.children[2].textContent = siteContent["contact"]["phone"];
+contact.children[3].textContent = siteContent["contact"]["email"];
+
+const footA = document.querySelectorAll('footer a');
+footA.forEach(item => item.classList.add("bold"));
+footA.forEach(item => item.classList.remove("italic"));
+footA.textContent = siteContent["footer"]["copyright"];
+
