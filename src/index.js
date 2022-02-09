@@ -48,14 +48,14 @@ navBar.forEach((text, index) => {
   text.textContent = links[index]
 })
 
-const logoImg = document.querySelector("header img")
-logoImg.src = siteContent.images['logo-img']
+const logoImg = document.querySelector('#logo-img')
+logoImg.src = '../mocks/img/logo.png'
 
-const ctaImg = document.querySelector(".cta img");
-ctaImg.src = siteContent.images["cta-img"];
+const ctaImg = document.querySelector("#cta-img");
+ctaImg.src = '../mocks/img/cta.png'
 
-const middleImg = document.querySelector(".main-content img");
-middleImg.src = siteContent.images["accent-img"];
+const middleImg = document.querySelector("#middle-img");
+middleImg.src = '../mocks/img/accent.png'
 
 const hOneTextNode = document.querySelector("h1");
 hOneTextNode.textContent = siteContent["cta"]["h1"];
